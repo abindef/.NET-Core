@@ -18,9 +18,7 @@ namespace ConfigurationDemo
                 { "section2:section3:key7","value7" }
             });
 
-
-
-
+           
             IConfigurationRoot configurationRoot = builder.Build();
 
 
@@ -39,7 +37,7 @@ namespace ConfigurationDemo
             var section3 = section2.GetSection("section3");
             Console.WriteLine($"key7:{section3["key7"]}");
 
-
+            Console.ReadKey();
 
         }
     }

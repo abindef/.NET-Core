@@ -23,11 +23,12 @@ namespace ConfigurationEnvironmentVariablesDemo
             //#endregion
 
             #region 前缀过滤
-            builder.AddEnvironmentVariables("XIAO_");
+            builder.AddEnvironmentVariables("ZX_");//去掉其它特定性干扰，只注入指定值
             var configurationRoot = builder.Build();
             Console.WriteLine($"KEY1:{configurationRoot["KEY1"]}");
             Console.WriteLine($"KEY2:{configurationRoot["KEY2"]}");
             #endregion
+            Console.ReadKey();
         }
     }
 }
