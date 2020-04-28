@@ -7,17 +7,21 @@ namespace ConfigurationCustom
     {
         static void Main(string[] args)
         {
+          
             var builder = new ConfigurationBuilder();
-            builder.AddMyConfiguration();
+            //builder.Add(new MyConfigurationSource());
+            //var configRoot = builder.Build();
+            //Console.WriteLine($"lastTime:{configRoot["lastTime"]}");
 
-            var configRoot = builder.Build();
+            //builder.AddMyConfiguration();
+            //var configRoot = builder.Build();
+            //ChangeToken.OnChange(() => configRoot.GetReloadToken(), () =>
+            //{
+            //    Console.WriteLine($"lastTime:{configRoot["lastTime"]}");
+            //});
+            //Console.WriteLine("开始了");
 
-            ChangeToken.OnChange(() => configRoot.GetReloadToken(), () =>
-            {
-                Console.WriteLine($"lastTime:{configRoot["lastTime"]}");
-            });
 
-            Console.WriteLine("开始了");
             Console.ReadKey();
         }
     }
